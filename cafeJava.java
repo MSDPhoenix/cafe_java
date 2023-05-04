@@ -44,13 +44,19 @@ public class cafeJava {
             System.out.println(customer3 + pendingMessage);
         }
         //Jimmy
-        double priceDifference = lattePrice - dripCoffeePrice;
-        int diffCents = (int) Math.round(priceDifference*100);
-        double diffRounded = (double) diffCents/100;
-        DecimalFormat df = new DecimalFormat("#0.00");
-        String formatted = df.format(diffRounded);
+        // double priceDifference = lattePrice - dripCoffeePrice;
+        // int diffCents = (int) Math.round(priceDifference*100);
+        // double diffRounded = (double) diffCents/100;
+        // DecimalFormat df = new DecimalFormat("#0.00");
+        // String formatted = df.format(diffRounded);
+        // System.out.println("\n"+generalGreeting + customer4);
+        // System.out.println(displayTotalMessage + formatted);
+
+
+        double priceDifference = ((lattePrice - dripCoffeePrice)*100)/100;
+
         System.out.println("\n"+generalGreeting + customer4);
-        System.out.println(displayTotalMessage + formatted);
+        System.out.println(displayTotalMessage + priceDifference);
         if (isReadyOrder4){
             System.out.println(customer4 + readyMessage);
         }else{
